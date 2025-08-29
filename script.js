@@ -10,11 +10,13 @@ function playNote(key) {
   const noteAudio = document.getElementById(key.dataset.note);
   noteAudio.currentTime = 0;
   noteAudio.play();
-  key.classList.add('active');
+  
+  
 //Add active style class to clicked elements
-    key.classList.remove('active');
+   key.classList.add('active');
 //Remove active class
     noteAudio.addEventListener('ended', () => {
+       key.classList.remove('active');
   });
 }
 
